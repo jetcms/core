@@ -1,0 +1,112 @@
+@import "node_modules/bootstrap/less/variables.less";
+
+h1, .h1 {
+    color:@brand-danger;
+    margin-top: 0px
+}
+
+marker {
+    background-color: #D90F0F;
+    color: #FFF;
+    padding: 2px 9px;
+    border-radius: 10px;
+}
+
+.print-p-indent {
+    text-indent: 20px;
+}
+.print-ol (@padding-left,@background-color,@text-color,@font-size,@padding,@order-radius) {
+    text-align: left;
+    padding-left: 13px;
+    counter-reset: list 0;
+
+
+    li {
+        position: relative;
+        list-style-type: none;
+        background-position: 0px;
+        background-repeat: no-repeat;
+        line-height: 23px;
+        margin-bottom: 12px;
+        padding-left: @padding-left;
+    }
+    li:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        counter-increment: list;
+        content: counter(list) "";
+        display: inline-block;
+        text-align: center;
+        background: @background-color;
+        color: @text-color;
+        font-size: @font-size;
+        padding: @padding;
+        -webkit-border-radius: @order-radius;
+        -moz-border-radius: @order-radius;
+        border-radius: @order-radius;
+    }
+}
+.print-ul-fa (@_icon) {
+    li {
+        padding-left: 1.3em ;
+    }
+
+    li:before {
+        content: @_icon;
+        display: inline-block;
+        font-family: FontAwesome;
+        margin-left: -1.3em;
+        width: 1.3em;
+    }
+}
+
+.print-ol {
+    .print-ol(40px,@brand-primary,@component-active-color,@font-size-h3,4px 8px,100%);
+}
+
+.print-marker-block {
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    padding: 10px;
+    margin-bottom: 25px;
+    background-color: #E1FFE6;
+    font-size: @font-size-h4;
+}
+
+.print-title-underline {
+    border-bottom: 1px double #DDDDDD;
+    padding-bottom: 9px;
+    margin-top: 10px;
+    margin-bottom: 26px;
+    color: #D9230F;
+}
+
+.print-ol-small {
+    .print-ol(30px,@brand-primary,@component-active-color,@font-size-base,0px 7px,100%);
+}
+
+.print-fa-check {
+    .print-ul-fa("\f00c");
+    li:before{
+        padding-top: 10px;
+        color: @brand-success;
+    }
+}
+
+.printt-fa-arrow  {
+    .print-ul-fa("\f0a9");
+    li:before { 
+        color: @brand-primary;
+        font-size: @font-size-large;
+    }
+}
+.print-panel {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+}

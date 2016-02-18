@@ -1,0 +1,25 @@
+{
+    "name": "jetcms/core",
+    "description": "CMS",
+    "keywords": ["laravel", "cms", "controllers", "sitemap"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alex. Suroviy",
+            "email": "suroviy@bk.ru"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "cartalyst/sentinel": "v2.0.*",
+        "graham-campbell/markdown": "v6.0.1"
+    },
+    "require-dev": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "JetCMS\\Core\\": "src/"
+        }
+    }
+}

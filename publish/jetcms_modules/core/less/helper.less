@@ -1,0 +1,70 @@
+.jet-helper-form() {
+  .group {
+    .form-group();
+
+    border-top: solid 1px #fff;
+    border-bottom: solid 1px #fff;
+    padding: 5px 6px;
+    margin-bottom: 10px;
+
+    &:focus, &:hover {
+      background: lighten(@brand-success, 55%);
+      border-top: solid 1px lighten(@brand-success, 40%);
+      border-bottom: solid 1px lighten(@brand-success, 40%);
+    }
+
+    input {
+      .form-control();
+    }
+    textarea {
+      .form-control();
+      height: 100px;
+    }
+  }
+
+  .checkbox{
+    margin: 20px 8px;
+  }
+
+  .error {
+
+    &, &:focus, &:hover {
+      background: lighten(@brand-danger, 55%);
+      border-top: solid 1px lighten(@brand-danger, 40%);
+      border-bottom: solid 1px lighten(@brand-danger, 40%);
+    }
+    color: @brand-danger;
+    input {
+      color: @brand-danger;
+      border-color: @brand-danger;
+    }
+    textarea {
+      color: @brand-danger;
+      border-color: @brand-danger;
+    }
+  }
+
+  .edit {
+    &, &:focus, &:hover {
+      background: lighten(@brand-info, 55%);
+      border-top: solid 1px lighten(@brand-info, 40%);
+      border-bottom: solid 1px lighten(@brand-info, 40%);
+    }
+    color: @brand-info;
+    input {
+      color: @brand-info;
+      border-color: @brand-info;
+    }
+    textarea {
+      color: @brand-info;
+      border-color: @brand-info;
+    }
+  }
+
+  [type=submit] {
+    .btn();
+    .btn-success();
+    .btn-block();
+  }
+
+}
